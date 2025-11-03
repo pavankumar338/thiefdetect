@@ -1,0 +1,7 @@
+ 
+werkzeug
+numpy
+opencv-python
+torch
+# Optional but recommended if using YOLOv8 checkpoints
+ultralytics

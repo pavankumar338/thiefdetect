@@ -1,0 +1,37 @@
+:root{
+  --bg:#0b1220;
+  --card: rgba(255,255,255,0.03);
+  --accent1: #06b6d4;
+  --accent2: #3b82f6;
+  --muted: #b7c1d6;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,Segoe UI,Roboto,Arial,sans-serif;background:linear-gradient(180deg,var(--bg),#09111a);color:#e6edf3}
+.container{max-width:1100px;margin:28px auto;padding:20px}
+.header{display:flex;flex-direction:column;gap:6px;margin-bottom:18px}
+.brand{font-size:28px;font-weight:700}
+.subtitle{color:var(--muted)}
+.main{display:grid;grid-template-columns:380px 1fr;gap:18px}
+.card{background:var(--card);padding:16px;border-radius:12px;box-shadow:0 8px 30px rgba(2,6,23,0.6)}
+.label{display:block;margin-top:12px;margin-bottom:6px;color:var(--muted);font-size:0.95rem}
+.file-row{display:flex;gap:8px;align-items:center}
+.file-row input[type=file]{flex:1}
+.btn-primary{background:linear-gradient(90deg,var(--accent1),var(--accent2));color:white;padding:10px 14px;border:none;border-radius:8px;cursor:pointer}
+.muted{color:var(--muted);margin-top:12px}
+.video-wrap{min-height:320px;background:rgba(255,255,255,0.01);display:flex;align-items:center;justify-content:center;border-radius:8px}
+.download-link{display:inline-block;margin-top:12px;padding:8px 12px;background:rgba(59,130,246,0.12);color:var(--accent2);border-radius:8px;text-decoration:none}
+
+.preview-box{margin-top:12px}
+.preview-title{color:var(--muted);font-size:0.9rem;margin-bottom:8px}
+.thumb-wrap{min-height:120px;border-radius:8px;background:rgba(255,255,255,0.01);display:flex;align-items:center;justify-content:center}
+.thumb-wrap video{max-width:100%;max-height:160px;border-radius:6px}
+
+.progress{height:10px;background:rgba(255,255,255,0.03);border-radius:6px;margin-top:10px;overflow:hidden}
+.progress-bar{height:100%;background:linear-gradient(90deg,var(--accent1),var(--accent2));width:0%}
+
+/* Spinner */
+.spinner{width:36px;height:36px;border-radius:50%;border:4px solid rgba(255,255,255,0.12);border-top-color:var(--accent2);animation:spin 1s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.footer{margin-top:20px;color:var(--muted);font-size:0.9rem}
+
+@media(max-width:900px){.main{grid-template-columns:1fr}}

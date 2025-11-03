@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Thief Detection</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="brand">Smart Detecting with AI</div>
+        <div class="subtitle"> Automatically detect suspicious activity and sends the instant alerts .</div>
+      </header>
+
+      <main class="main">
+        <section class="card input-card">
+          <h3>Upload</h3>
+          <form id="upload-form" enctype="multipart/form-data">
+            <label class="label">Select video to analyze</label>
+            <div class="file-row">
+              <input id="file-input" type="file" name="video" accept="video/*" required />
+              <button id="run" class="btn-primary" type="submit">Run detection</button>
+            </div>
+          </form>
+
+          <div id="status" class="muted">Ready</div>
+
+          <div class="preview-box">
+            <div class="preview-title">Input preview</div>
+            <div id="thumb-wrap" class="thumb-wrap">No file selected</div>
+            <div id="upload-progress" class="progress" style="display:none">
+              <div id="upload-progress-bar" class="progress-bar" style="width:0%"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="card output-card">
+          <h3>Output</h3>
+          <div id="video-wrapper" class="video-wrap">No output yet</div>
+          <div class="output-actions">
+            <a id="download-link" class="download-link" style="display:none">Download annotated video</a>
+            <div id="spinner" class="spinner" style="display:none"></div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">Built with care — runs detection on the server.</footer>
+    </div>
+
+    <script src="/static/script.js"></script>
+  </body>
+</html>
